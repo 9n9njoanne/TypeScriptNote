@@ -1,0 +1,35 @@
+原始資料型別 Primitive Types
+
+// string
+const myName: string = 'iris';
+const myAge: number = 18;
+
+const sentence: string = `Hello, my name is ${myName}.
+I'll be ${myAge + 1} years old next month.`;
+
+// number 
+const decLiteral: number = 6;
+const notANumber: number = NaN;
+const infinityNumber: number = Infinity;
+
+// boolean
+const isDone: boolean = false;
+
+// null&undefined
+null 是已經賦予值， 而值為空值。 undefined 則是宣告了未被賦值
+
+// In TS  tsconfig >> strictNullChecks off
+// null
+const n: null = null;
+//如:賦值給string型別
+const city: string = n;
+console.log("city", city);
+//undefined
+const u: undefined = undefined;
+//如:賦值給number型別
+const price: number = u;
+console.log("price", price);
+
+// In TS  tsconfig >> strictNullChecks oon
+這時候我們就可以在檔案上看到會報錯，Type 'null' is not assignable to type 'string'.
+在嚴格檢查(use strict)下， 是不能賦值給其他型別的。
